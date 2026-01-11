@@ -22,7 +22,7 @@ export default function Home() {
       <Marquee />
       <BlogSlider />
        <SheetMarquee/>
-       {/* <Footer/>   */}
+       <Footer/>  
     </>
   );
 }
