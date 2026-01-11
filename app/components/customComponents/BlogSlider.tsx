@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import ViewBlogs from "./view-blogs";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -90,7 +91,7 @@ const blogPosts = [
 ];
 
 const BlogSlider = () => {
-    const swiperRef = React.useRef(null);
+    const swiperRef = React.useRef<SwiperType | null>(null);
 
     return (
         <section className="flex flex-col lg:flex-row items-start justify-between gap-6 sm:gap-8 md:gap-10 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:pl-20 overflow-hidden relative">
