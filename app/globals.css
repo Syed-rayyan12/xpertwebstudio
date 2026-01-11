@@ -216,6 +216,7 @@ span.inline-flex.items-center.rounded-full.bg-\[\#ff6900\].px-6.py-3.text-\[13px
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: #0E0F11;
   }
 }
