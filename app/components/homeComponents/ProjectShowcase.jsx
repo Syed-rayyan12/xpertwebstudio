@@ -8,7 +8,10 @@ const projects = [
         id: 1,
         year: '2025',
         client: 'Digital Studio Pro',
-        tags: ['Branding', 'Website'],
+        tags: [
+            { id: 'tag-1-1', label: 'Branding' },
+            { id: 'tag-1-2', label: 'Website' }
+        ],
         title: "Revolutionary E-Commerce Platform for Modern Retail",
         description: "A comprehensive digital solution combining innovative design with seamless user experience.",
         video: 'https://videos.pexels.com/video-files/3255275/3255275-uhd_2560_1440_25fps.mp4',
@@ -17,7 +20,10 @@ const projects = [
         id: 2,
         year: '2025',
         client: 'Creative Agency',
-        tags: ['Design', 'Development'],
+        tags: [
+            { id: 'tag-2-1', label: 'Design' },
+            { id: 'tag-2-2', label: 'Development' }
+        ],
         title: 'Premium Brand Identity & Digital Experience',
         description: 'Full-scale branding and web development for luxury lifestyle brand.',
         video: 'https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4',
@@ -26,7 +32,10 @@ const projects = [
         id: 3,
         year: '2025',
         client: 'Tech Innovations',
-        tags: [ 'Website', 'App'],
+        tags: [
+            {label: 'Development' },
+            {label: 'Website' },
+        ],
         title: 'Next-Gen SaaS Platform Design & Development',
         description: 'Modern tech startup branding with scalable web application.',
         video: 'https://videos.pexels.com/video-files/3141207/3141207-uhd_2560_1440_25fps.mp4',
@@ -35,7 +44,10 @@ const projects = [
         id: 4,
         year: '2025',
         client: 'Global Ventures',
-        tags: ['Website', 'Strategy'],
+        tags: [
+            { id: 'tag-4-1', label: 'Website' },
+            { id: 'tag-4-2', label: 'Strategy' }
+        ],
         title: 'Corporate Digital Transformation & Brand Evolution',
         description: 'Enterprise-level web platform with comprehensive brand refresh.',
         video: 'https://videos.pexels.com/video-files/3141205/3141205-uhd_2560_1440_25fps.mp4',
@@ -84,10 +96,11 @@ const ProjectCard = ({ project, badgePosition = '-right-11' }) => {
             >
                 {project.tags.map((tag) => (
                     <span
-                        key={`${project.id}-${tag}`}
-                        className="rounded-full px-2 max-sm:px-3 lg:px-7 py-1 sm:py-1.5 lg:py-2 bg-[#000] text-[10px] sm:text-[11px] lg:text-[13px] font-medium text-white/90"
+                        key={tag.id}
+                        id={tag.id}
+                        className="rounded-full px-2 max-sm:px-4 lg:px-7 py-1 sm:py-1.5 lg:py-2 bg-[#000] text-[10px] sm:text-[11px] lg:text-[13px] font-medium text-white/90"
                     >
-                        {tag}
+                        {tag.label}
                     </span>
                 ))}
             </div>

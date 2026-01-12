@@ -15,6 +15,7 @@ html {
 }
 
 @theme {
+  --breakpoint-xs: 630px;
   --breakpoint-xxl: 1281px;
   --breakpoint-xxxl: 1440px;
 }
@@ -268,3 +269,5 @@ span.inline-flex.items-center.rounded-full.bg-\[\#ff6900\].px-6.py-3.text-\[13px
     }
   }
 }
+
+/* Custom utilities for tags at max-width 630px */
