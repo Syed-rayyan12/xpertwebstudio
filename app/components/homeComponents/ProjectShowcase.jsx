@@ -8,7 +8,7 @@ const projects = [
         id: 1,
         year: '2025',
         client: 'Digital Studio Pro',
-        tags: ['Branding', 'Website', 'SEO'],
+        tags: ['Branding', 'Website'],
         title: "Revolutionary E-Commerce Platform for Modern Retail",
         description: "A comprehensive digital solution combining innovative design with seamless user experience.",
         video: 'https://videos.pexels.com/video-files/3255275/3255275-uhd_2560_1440_25fps.mp4',
@@ -26,7 +26,7 @@ const projects = [
         id: 3,
         year: '2025',
         client: 'Tech Innovations',
-        tags: ['Branding', 'Website', 'App'],
+        tags: [ 'Website', 'App'],
         title: 'Next-Gen SaaS Platform Design & Development',
         description: 'Modern tech startup branding with scalable web application.',
         video: 'https://videos.pexels.com/video-files/3141207/3141207-uhd_2560_1440_25fps.mp4',
@@ -35,7 +35,7 @@ const projects = [
         id: 4,
         year: '2025',
         client: 'Global Ventures',
-        tags: ['Website', 'Branding', 'Strategy'],
+        tags: ['Website', 'Strategy'],
         title: 'Corporate Digital Transformation & Brand Evolution',
         description: 'Enterprise-level web platform with comprehensive brand refresh.',
         video: 'https://videos.pexels.com/video-files/3141205/3141205-uhd_2560_1440_25fps.mp4',
@@ -44,6 +44,32 @@ const projects = [
 
 const ProjectCard = ({ project, badgePosition = '-right-11' }) => {
     const [isHovering, setIsHovering] = React.useState(false)
+    const [isMobile, setIsMobile] = React.useState(false)
+
+    React.useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 640)
+        }
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+
+    const shouldShowHover = isMobile || isHovering
+
+    const getClipPath = () => {
+        if (!shouldShowHover) {
+            return 'polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)'
+        }
+        
+        if (isMobile) {
+            // Smaller polygon for mobile
+            return 'polygon(0% 0%, calc(100% - 120px) 0%, calc(100% - 118px) 2px, calc(100% - 115px) 5px, calc(100% - 113px) 10px, calc(100% - 112px) 15px, calc(100% - 111px) 20px, calc(100% - 111px) 25px, calc(100% - 110px) 30px, calc(100% - 108px) 33px, calc(100% - 105px) 35px, calc(100% - 100px) 37px, calc(100% - 95px) 38px, calc(100% - 88px) 39px, calc(100% - 20px) 39px, calc(100% - 17px) 40px, calc(100% - 14px) 42px, calc(100% - 11px) 44px, calc(100% - 8px) 47px, calc(100% - 5px) 51px, calc(100% - 3px) 56px, calc(100% - 1px) 62px, 100% 68px, 100% 100%, 0% 100%)'
+        }
+        
+        // Desktop polygon
+        return 'polygon(0% 0%, calc(100% - 280px) 0%, calc(100% - 275px) 2px, calc(100% - 270px) 5px, calc(100% - 267px) 10px, calc(100% - 265px) 15px, calc(100% - 264px) 20px, calc(100% - 264px) 50px, calc(100% - 262px) 55px, calc(100% - 258px) 60px, calc(100% - 252px) 64px, calc(100% - 245px) 67px, calc(100% - 235px) 69px, calc(100% - 220px) 70px, calc(100% - 40px) 70px, calc(100% - 35px) 71px, calc(100% - 30px) 73px, calc(100% - 25px) 75px, calc(100% - 20px) 78px, calc(100% - 15px) 82px, calc(100% - 10px) 87px, calc(100% - 5px) 93px, 100% 100px, 100% 100%, 0% 100%)'
+    }
 
     return (
         <div
@@ -54,12 +80,12 @@ const ProjectCard = ({ project, badgePosition = '-right-11' }) => {
             {/* Badges Container - Positioned at Top Right Outside */}
             <div
                 key={`badge-${project.id}`}
-                className={`absolute -right-2 sm:-right-6 lg:${badgePosition} top-0 z-20 flex flex-wrap justify-end gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isHovering ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
+                className={`absolute -right-2 sm:-right-6 lg:${badgePosition} top-0 z-20 flex flex-wrap justify-end gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-4 lg:px-10 py-2 sm:py-3 lg:py-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${shouldShowHover ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
             >
                 {project.tags.map((tag) => (
                     <span
                         key={`${project.id}-${tag}`}
-                        className="rounded-full px-2 sm:px-3 lg:px-5 py-1 sm:py-1.5 lg:py-2 bg-[#000] text-[10px] sm:text-[11px] lg:text-[13px] font-medium text-white/90"
+                        className="rounded-full px-2 max-sm:px-3 lg:px-7 py-1 sm:py-1.5 lg:py-2 bg-[#000] text-[10px] sm:text-[11px] lg:text-[13px] font-medium text-white/90"
                     >
                         {tag}
                     </span>
@@ -70,7 +96,7 @@ const ProjectCard = ({ project, badgePosition = '-right-11' }) => {
             <div
                 className="relative h-full w-full overflow-hidden bg-[#0c0d12] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 style={{
-                    clipPath: isHovering
+                    clipPath: shouldShowHover
                         ? 'polygon(0% 0%, calc(100% - 280px) 0%, calc(100% - 275px) 2px, calc(100% - 270px) 5px, calc(100% - 267px) 10px, calc(100% - 265px) 15px, calc(100% - 264px) 20px, calc(100% - 264px) 50px, calc(100% - 262px) 55px, calc(100% - 258px) 60px, calc(100% - 252px) 64px, calc(100% - 245px) 67px, calc(100% - 235px) 69px, calc(100% - 220px) 70px, calc(100% - 40px) 70px, calc(100% - 35px) 71px, calc(100% - 30px) 73px, calc(100% - 25px) 75px, calc(100% - 20px) 78px, calc(100% - 15px) 82px, calc(100% - 10px) 87px, calc(100% - 5px) 93px, 100% 100px, 100% 100%, 0% 100%)'
                         : 'polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)',
                     borderRadius: '32px'

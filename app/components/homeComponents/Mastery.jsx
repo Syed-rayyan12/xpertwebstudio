@@ -115,14 +115,14 @@ function Mastery() {
                     <div className='w-full'>
                         <div className="flex flex-col gap-12 max-sm:justify-center lg:flex-row max-lg:flex-col">
                             <div>
-                                <h1 className="text-4xl max-sm:pt-4 font-normal text-center leading-[1.2] ">
+                                <h1 className="text-4xl max-sm:pt-4 font-normal max-sm:text-center leading-[1.2] ">
                                     Mastery of Creative Innovation
                                 </h1>
-                                <div className='text-center'>
+                                <div className='max-sm:text-center'>
 
                                 <a
                                     href="#"
-                                    className="mt-5 inline-block text-center rounded-[30px] bg-[#ff6600] px-[40px] py-[15px] text-[14px] font-semibold tracking-[1px] text-white transition-all duration-300 hover:translate-x-[5px] hover:bg-[#ff8833] hover:text-black hover:shadow-[0_10px_30px_rgba(255,102,0,0.27)]"
+                                    className="mt-5 inline-block max-sm:text-center rounded-[30px] bg-[#ff6600] px-[40px] py-[15px] text-[14px] font-semibold tracking-[1px] text-white transition-all duration-300 hover:translate-x-[5px] hover:bg-[#ff8833] hover:text-black hover:shadow-[0_10px_30px_rgba(255,102,0,0.27)]"
                                     >
                                     Read More
                                 </a>
@@ -139,7 +139,7 @@ function Mastery() {
                                         </div>
                                     ))}
                                 </div>
-                                <p className="text-[15px] leading-[1.8] text-[#999] text-center">
+                                <p className="text-[15px] leading-[1.8] text-[#999] max-sm:text-center">
                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less here, content "here", making it look like readable English.
                                 </p>
                             </div>
