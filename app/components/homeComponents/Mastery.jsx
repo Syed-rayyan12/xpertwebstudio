@@ -81,14 +81,14 @@ function Mastery() {
 
             {/* Main Content Section */}
             <div className="xl:px-16  lg:px-12  max-sm:px-6 md:px-10 sm:px-6  mx-auto mt-20">
-                <div className="flex max-sm:flex-col gap-12">
+                <div className="flex max-sm:flex-col max-sm:justify-center gap-12">
                     {/* Left Side - Stats Card */}
                     <div ref={statsRef} className="relative w-[90%] max-sm:w-full max-sm:h-[320px] pt-10  rounded-2xl sm:rounded-3xl border border-[#f8f8f8] bg-[linear-gradient(135deg,#1a1a1a_0%,#0f0f0f_100%)] px-6 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:shadow-[0_0px_60px_rgba(255,102,0,0.26)]">
                         <div className='w-full'>
                             <div className="text-5xl sm:text-6xl md:text-[80px] font-bold tracking-[2px] text-[#ff6600]">
                                 {Math.floor(count)}+
                             </div>
-                            <div className="w-full sm:w-4/5 md:w-3/4">
+                            <div className="w-full sm:w-4/5 md:w-3/4 ">
                                 <p className="text-sm sm:text-[15px] leading-[1.6] sm:leading-[1.8] text-[#999]">
                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                                 </p>
@@ -98,7 +98,7 @@ function Mastery() {
                       
 
 
-                            <div className="absolute bottom-[50px] right-[40px] flex h-[120px] w-[100px] items-end gap-[15px]">
+                            <div className="absolute bottom-[50px] max-sm:right-30 max-sm:bottom-6 right-[40px] flex h-[120px] w-[100px] items-end gap-[15px]">
                                 <div
                                     className="flex-1 rounded-[8px] bg-[linear-gradient(180deg,#666_0%,#333_100%)] transition-all duration-1000 ease-out"
                                     style={{ height: `${barHeight1}%` }}
@@ -113,20 +113,23 @@ function Mastery() {
 
                     {/* Right Side - Content */}
                     <div className='w-full'>
-                        <div className="flex flex-col gap-12  lg:flex-row max-lg:flex-col">
+                        <div className="flex flex-col gap-12 max-sm:justify-center lg:flex-row max-lg:flex-col">
                             <div>
-                                <h1 className="text-4xl max-sm:pt-4 font-normal leading-[1.2] ">
+                                <h1 className="text-4xl max-sm:pt-4 font-normal text-center leading-[1.2] ">
                                     Mastery of Creative Innovation
                                 </h1>
+                                <div className='text-center'>
+
                                 <a
                                     href="#"
-                                    className="mt-5 inline-block rounded-[30px] bg-[#ff6600] px-[40px] py-[15px] text-[14px] font-semibold tracking-[1px] text-white transition-all duration-300 hover:translate-x-[5px] hover:bg-[#ff8833] hover:text-black hover:shadow-[0_10px_30px_rgba(255,102,0,0.27)]"
-                                >
+                                    className="mt-5 inline-block text-center rounded-[30px] bg-[#ff6600] px-[40px] py-[15px] text-[14px] font-semibold tracking-[1px] text-white transition-all duration-300 hover:translate-x-[5px] hover:bg-[#ff8833] hover:text-black hover:shadow-[0_10px_30px_rgba(255,102,0,0.27)]"
+                                    >
                                     Read More
                                 </a>
+                                    </div>
                             </div>
                             <div className="max-w-xl">
-                                <div className="mb-[30px] flex flex-wrap gap-[15px]">
+                                <div className="mb-[30px] max-sm:justify-center flex flex-wrap gap-[15px]">
                                     {tagList.map((tag) => (
                                         <div
                                             key={tag}
@@ -136,7 +139,7 @@ function Mastery() {
                                         </div>
                                     ))}
                                 </div>
-                                <p className="text-[15px] leading-[1.8] text-[#999]">
+                                <p className="text-[15px] leading-[1.8] text-[#999] text-center">
                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less here, content "here", making it look like readable English.
                                 </p>
                             </div>

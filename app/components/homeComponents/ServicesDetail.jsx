@@ -35,7 +35,7 @@ const ServicesDetail = () => {
     // ...existing code...
     return (
         <section className='relative xl:mx-6  lg:mx-6  max-sm:mx-4 max-sm:mx-4 md:mx-4 sm:mx-4 bg-[#1A1B1E] rounded-xl'>
-            <div className=" w-full xl:px-16  lg:px-12  max-sm:px-4 max-sm:px-4 md:px-10 sm:px-6   mx-auto mt-10 min-h-[1100px] md:min-h-[1180px]  pb-12 text-white">
+            <div className=" w-full xl:px-16  lg:px-12  max-sm:px-4 max-sm:px-4 md:px-10 sm:px-6   mx-auto mt-10 min-h-[1100px] md:min-h-[1180px] max-sm:min-h-[800px]  pb-12 text-white">
                 <div className="flex flex-col lg:flex-row max-sm:pt-4 sm:pt-4 md:pt-4 max-sm:text-xl items-start lg:items-center justify-between mb-8 lg:mb-16 gap-4 lg:gap-8">
                     <div className="w-full lg:w-[20%]">
                         <span className="text-[#FF5900]  text-xs sm:text-sm font-semibold uppercase tracking-[0.2em]">
@@ -113,7 +113,7 @@ const ServicesDetail = () => {
             <div className='w-full xl:px-16  lg:px-12  max-sm:px-4 md:px-10 sm:px-6 mx-auto absolute left-0 right-0  max-sm:top-270 md:top-300 lg:top-230'>
 
 
-                <div className='mx-auto mt-20 relative'>
+                <div className='mx-auto mt-20 max-sm:-mt-40 relative'>
                     <Image src="/images/video-banner.png" alt='video banner' width={600} height={600} className='object-cover w-full max-sm:h-[150px] relative' />
                     <div className='absolute top-0 left-0 w-full sm:w-3/4 w f p-3 sm:p-4 lg:p-6 max-sm:hidden max-xl:hidden'>
                         <Image src="/images/shape.png" alt='shape' width={600} height={600} className='object-contain ' />
