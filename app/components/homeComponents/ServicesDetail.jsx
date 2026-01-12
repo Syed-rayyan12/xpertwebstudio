@@ -141,7 +141,7 @@ const ServicesDetail = () => {
                 </div>
                 <div className='flex items-center justify-center mt-12 sm:mt-20 lg:mt-20'>
                     <div className='flex flex-col lg:flex-row gap-6 lg:gap-12 w-full max-sm:mt-10'>
-                        <h2 className='text-lg sm:text-2xl text-white lg:text-4xl w-full lg:w-1/2'>
+                        <h2 className='text-lg max-sm:text-3xl text-white lg:text-4xl w-full lg:w-1/2'>
                             A web design agency in Newcastle that truly cares about you and your brand—no matter your business size, industry, or goals.
                         </h2>
                         <div className='w-full lg:w-1/2'>
