@@ -380,7 +380,7 @@ const Pricing = () => {
                 {plans.map((plan, index) => (
                     <div
                         key={`${activeTab}-${index}`}
-                        className="rounded-md border-2 border-[#FF5900] bg-[#0c0d12]/50 p-4 sm:p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,89,0,0.3)] animate-fadeIn"
+                        className="rounded-md border-2 border-[#FF5900] bg-[#0c0d12]/50 p-4 sm:p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2  animate-fadeIn"
                     >
                         {/* Plan Name */}
                         <h3 className="text-xl sm:text-2xl font-semibold text-center text-white mb-3 sm:mb-4">
@@ -404,9 +404,9 @@ const Pricing = () => {
                         {/* Features List */}
                         <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 h-[300px] sm:h-[350px] md:h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#FF5900] scrollbar-track-gray-800 pr-2">
                             {plan.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-start gap-2 sm:gap-3 text-white/80 text-xs sm:text-sm">
+                                <li key={idx} className="flex items-center gap-2 sm:gap-3 text-white/80 text-xs sm:text-sm">
                                     <svg
-                                        className="w-5 h-5 text-[#FF5900] flex-shrink-0 mt-0.5"
+                                        className="w-5 h-5 text-white flex-shrink-0 mt-0.5"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -418,7 +418,7 @@ const Pricing = () => {
                                             d="M5 13l4 4L19 7"
                                         />
                                     </svg>
-                                    <span>{feature}</span>
+                                    <span className='text-white'>{feature}</span>
                                 </li>
                             ))}
                         </ul>
@@ -427,9 +427,11 @@ const Pricing = () => {
                         <div className="h-[1px] bg-white mb-4 sm:mb-6"></div>
 
                         {/* Order Button */}
-                        <button className="w-full rounded-3xl bg-[#FF5900] px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-[#ff6a1a] hover:shadow-[0_10px_30px_rgba(255,89,0,0.4)]">
+                        <div className='w-44 mx-auto'>
+                        <button className="w-full rounded-[51.8px] bg-[#FF5900] px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium text-white transition-all duration-300 hover:bg-[#ff6a1a] hover:shadow-[0_10px_30px_rgba(255,89,0,0.4)]">
                             Order Now
                         </button>
+                        </div>
                     </div>
                 ))}
             </div>

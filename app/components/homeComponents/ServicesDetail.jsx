@@ -110,14 +110,14 @@ const ServicesDetail = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-full xl:px-16  lg:px-12  max-sm:px-4 md:px-10 sm:px-6 mx-auto absolute left-0 right-0  max-sm:top-230 md:top-260 lg:top-230  '>
+            <div className='w-full xl:px-16  lg:px-12  max-sm:px-4 md:px-10 sm:px-6 mx-auto absolute left-0 right-0  max-sm:top-270 md:top-300 lg:top-230'>
 
 
                 <div className='mx-auto mt-20 relative'>
                     <Image src="/images/video-banner.png" alt='video banner' width={600} height={600} className='object-cover w-full max-sm:h-[150px] relative' />
-                    <div className='absolute top-0 left-0 w-full sm:w-3/4 lg:w-1/2 p-3 sm:p-4 lg:p-6 max-sm:hidden max-xl:hidden'>
+                    <div className='absolute top-0 left-0 w-full sm:w-3/4 w f p-3 sm:p-4 lg:p-6 max-sm:hidden max-xl:hidden'>
                         <Image src="/images/shape.png" alt='shape' width={600} height={600} className='object-contain ' />
-                        <h2 className='absolute top-8 sm:top-16 lg:top-25 left-4 sm:left-8 lg:left-10 -translate-x-2 sm:-translate-x-4 lg:-translate-x-6 -translate-y-1/2 text-white text-sm sm:text-2xl lg:text-4xl font-semibold px-2 sm:px-4 lg:px-8 leading-tight'>
+                        <h2 className='absolute top-8 sm:top-16 lg:top-28 left-6 sm:left-8 lg:left-10 -translate-x-2 sm:-translate-x-4 lg:-translate-x-6 -translate-y-1/2 text-white text-sm sm:text-2xl lg:text-[37px] font-semibold px-2 sm:px-4 lg:px-8 leading-tight'>
                             Shape created<br /> something better than I ever<br /> could have imagined
                         </h2>
                         <div className='flex items-center '>
@@ -128,7 +128,7 @@ const ServicesDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='absolute  max-sm:right-0 max-sm:-bottom-16  xl:bottom-4  xl:right-16   lg:right-0 lg:-bottom-2 md:right-0 md:-bottom-2 flex  gap-2 max-sm:gap-3 '>
+                    <div className='absolute  max-sm:right-0 max-sm:-bottom-16  xl:bottom-0  xxl xxxl   lg:right-0 lg:-bottom-2 md:right-0 md:-bottom-2 flex  gap-2 max-sm:gap-3 '>
                         <div className='max-sm:hidden max-xl:hidden'>
                             <PlayVideo label="Play Video" />
                         </div>
