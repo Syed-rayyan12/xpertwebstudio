@@ -13,11 +13,11 @@ const ServicesDetail = () => {
     const [hoveredService, setHoveredService] = useState(null);
 
     const services = [
-        { id: 1, number: '01', title: 'Web Development', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80' },
-        { id: 2, number: '02', title: 'UI/UX Design', image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80' },
-        { id: 3, number: '03', title: 'Digital Marketing', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80' },
-        { id: 4, number: '04', title: 'Brand Strategy', image: 'https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&q=80' },
-        { id: 5, number: '05', title: 'SEO Optimization', image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800&q=80' }
+        { id: 1, number: '01', title: 'Web Development', image: '/images/web-development-service.png', link: '/web-development' },
+        { id: 2, number: '02', title: 'UI/UX Design', image: '/images/web-design.png', link: '/web-design' },
+        { id: 3, number: '03', title: 'Digital Marketing', image: '/images/digital-section.png', link: '/digital-marketing' },
+        { id: 4, number: '04', title: 'Brand Strategy', image: '/images/logo-section.png', link: '/logo-design' },
+        { id: 5, number: '05', title: 'SEO Optimization', image: '/images/design-1.png', link: '/seo-friendly' }
     ];
 
     useEffect(() => {
@@ -27,7 +27,10 @@ const ServicesDetail = () => {
         return () => clearInterval(interval);
     }, [services.length]);
 
-    const handleServiceHover = (index) => setHoveredService(index);
+    const handleServiceHover = (index) => {
+        setHoveredService(index);
+        setActiveImage(index);
+    };
     const handleServiceLeave = () => setHoveredService(null);
     // ...existing code...
     return (
@@ -49,20 +52,22 @@ const ServicesDetail = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-                    <div className="relative h-[250px] sm:h-[350px] lg:h-[650px] rounded-xl overflow-hidden bg-[#0c0d12]">
+                    <div 
+                        className="relative h-[250px] sm:h-[350px] lg:h-[650px] rounded-xl overflow-hidden bg-[#0c0d12]"
+                        onMouseEnter={() => setHoveredService(null)}
+                    >
                         <Image
                             key={activeImage}
                             src={services[activeImage].image}
                             alt={services[activeImage].title}
                             fill
-                            unoptimized
                             className="object-cover rounded-xl animate-slideInLeft"
                         />
                     </div>
-                    <div className="space-y-4 lg:space-y-8">
+                    <div className=" flex flex-col gap-8">
                         {services.map((service, index) => (
+                            <Link key={service.id} href={service.link}>
                             <div
-                                key={service.id}
                                 onMouseEnter={() => handleServiceHover(index)}
                                 onMouseLeave={handleServiceLeave}
                                 className={`flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 rounded-4xl border-1 transition-all duration-300 cursor-pointer ${hoveredService === index ? 'border-[#FF5900] bg-[#FF5900] text-white' : 'border-white'}`}
@@ -100,6 +105,7 @@ const ServicesDetail = () => {
                                     </svg>
                                 </div>
                             </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -122,13 +128,12 @@ const ServicesDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='absolute  max-sm:right-0 max-sm:-bottom-16   xl:-bottom-1  xl:-right-10   lg:right-0 lg:-bottom-2 md:right-0 md:-bottom-2 flex  gap-2 max-sm:gap-3 '>
+                    <div className='absolute  max-sm:right-0 max-sm:-bottom-16   xl:bottom-4  xl:right-40   lg:right-0 lg:-bottom-2 md:right-0 md:-bottom-2 flex  gap-2 max-sm:gap-3 '>
                         <div className='max-sm:hidden max-xl:hidden'>
                             <PlayVideo label="Play Video" />
                         </div>
                         <Link href="/video-testimonial">
                             <div>
-
                                 <ViewMoreVideo />
                             </div>
                         </Link>
@@ -145,9 +150,11 @@ const ServicesDetail = () => {
                                 Our preferred content management system is Craft CMS, giving you full control over your website pages, content, and SEO with ease. We are proud to be verified Craft CMS and Craft Commerce professional partners. Additionally, we deliver Shopify projects regularly, providing an intuitive eCommerce platform that helps businesses grow.<br />
                                 If you’re looking for a professional Manchester web design agency to elevate your brand or build your website, get in touch with XpertWebStudio today.
                             </h2>
+                            <Link href="/about-us">
                             <div className='mt-4 sm:mt-6 lg:mt-8'>
                                 <AboutXpert />
                             </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

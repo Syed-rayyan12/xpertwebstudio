@@ -3,25 +3,25 @@ import React from 'react'
 
 const Marquee = () => {
     const topLineItems = [
-        'CREATIVE DESIGN',
-        'WEB DEVELOPMENT',
-        'BRANDING',
-        'DIGITAL MARKETING',
-        'UI/UX DESIGN',
-        'SEO OPTIMIZATION',
+        'creative design',
+        'web development',
+        'branding',
+        'digital marketing',
+        'ui/ux design',
+        'seo optimization',
     ]
 
     const bottomLineItems = [
-        'INNOVATIVE SOLUTIONS',
-        'BRAND STRATEGY',
-        'CONTENT CREATION',
-        'SOCIAL MEDIA',
-        'GRAPHIC DESIGN',
-        'E-COMMERCE',
+        'innovative solutions',
+        'brand strategy',
+        'content creation',
+        'social media',
+        'graphic design',
+        'e-commerce',
     ]
 
     return (
-        <section className="relative overflow-hidden py-6 sm:py-10 lg:py-16  max-sm:mt-[690px] md:mt-[750px] lg:mt-[1100px]">
+        <section className="relative overflow-hidden py-6 sm:py-10 lg:py-16  max-sm:mt-[690px] sm:mt-[920px] md:mt-[1150px] lg:mt-[1100px]">
             {/* Top Line - Scrolls Left */}
             <div className="relative flex overflow-hidden whitespace-nowrap border-b-2 border-white/20 py-3 sm:py-4 lg:py-6">
                 <div className="flex animate-marquee-left gap-4 sm:gap-8 lg:gap-12">

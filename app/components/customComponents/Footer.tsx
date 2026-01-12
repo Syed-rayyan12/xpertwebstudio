@@ -81,27 +81,27 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-start justify-between bg-[#1A1B1E] rounded-xl p-4 sm:p-5 md:p-6 lg:p-6 gap-4 sm:gap-6 md:gap-8 lg:gap-8">
             <nav className="flex flex-col items-start gap-1.5 sm:gap-2">
               <a href="#home" className="hover:text-[#FF5900] text-[#FF5900] font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Home</a>
-              <a href="#about" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">About</a>
-              <a href="#services" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Packages</a>
-              <a href="#contact" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Portfolio</a>
-              <a href="#contact" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Contact Us</a>
+              <a href="/about-us" className="hover:text-[#FF5900] text-[15px]  ">About</a>
+              <a href="/packages" className="hover:text-[#FF5900] text-[15px]  ">Packages</a>
+              <a href="/portfolio" className="hover:text-[#FF5900] text-[15px]  ">Portfolio</a>
+              <a href="/contact-us" className="hover:text-[#FF5900] text-[15px]  ">Contact Us</a>
+            </nav>
+            <nav className="flex flex-col items-start gap-1.5 sm:gap-2">
+              <a href="#" className="hover:text-[#FF5900] text-[#FF5900] font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Services</a>
+              <a href="/web-development" className="hover:text-[#FF5900] text-[15px]    ">Web Development</a>
+              <a href="/app-development" className="hover:text-[#FF5900] text-[15px]  ">App Development</a>
+              <a href="/logo-design" className="hover:text-[#FF5900] text-[15px]  ">Logo Design</a>
             </nav>
             <nav className="flex flex-col items-start gap-1.5 sm:gap-2">
               <a href="#home" className="hover:text-[#FF5900] text-[#FF5900] font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Services</a>
-              <a href="#about" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Web Development</a>
-              <a href="#services" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">App Development</a>
-              <a href="#contact" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Logo Design</a>
+              <a href="/digital-marketing" className="hover:text-[#FF5900] text-[15px]  ">Digital Marketing</a>
+              <a href="/ecommerce-website" className="hover:text-[#FF5900] text-[15px]  ">Ecommerce Website</a>
             </nav>
             <nav className="flex flex-col items-start gap-1.5 sm:gap-2">
-              <a href="#home" className="hover:text-[#FF5900] text-[#FF5900] font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Services</a>
-              <a href="#about" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Digital Marketing</a>
-              <a href="#services" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Ecommerce Website</a>
-            </nav>
-            <nav className="flex flex-col items-start gap-1.5 sm:gap-2">
-              <a href="#home" className="hover:text-[#FF5900] text-[#FF5900] mb-2 sm:mb-4 text-sm sm:text-base">Quick Links</a>
-              <a href="#about" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Blogs</a>
-              <a href="#services" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Reviews</a>
-              <a href="#contact" className="hover:text-[#FF5900] text-xs sm:text-sm md:text-base">Video Testimonials</a>
+              <a href="#home" className="hover:text-[#FF5900] text-[#FF5900] font-semibold mb-2 sm:mb-4 text-sm sm:text-base">Quick Links</a>
+              <a href="/blogs" className="hover:text-[#FF5900] text-[15px]  ">Blogs</a>
+              <a href="/reviews" className="hover:text-[#FF5900] text-[15px]  ">Reviews</a>
+              <a href="/video-testimonials" className="hover:text-[#FF5900] text-[15px]  ">Video Testimonials</a>
             </nav>
           </div>
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between bg-[#1A1B1E] rounded-xl p-4 sm:p-5 md:p-6 gap-4 lg:gap-6">

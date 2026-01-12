@@ -5,6 +5,7 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import ViewBlogs from "./view-blogs";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const blogPosts = [
     {
@@ -108,9 +109,11 @@ const BlogSlider = () => {
                     The latest  from our  design studio
                 </h2>
 
+<Link href="/blogs" className="mt-4 sm:mt-6 md:mt-8">
                 <ViewBlogs />
+</Link>
 
-                <div className="flex gap-3 absolute max-lg-bottom-20 max-sm:right-0 max-sm:top-26 md:right-0 md:top-28 max-lg:-bottom-60 lg:-bottom-60">
+                <div className="flex gap-3 absolute max-lg-bottom-20 max-sm:right-0 max-sm:top-26 md:left-0 md:top-68 max-lg:-bottom-60 lg:-bottom-60">
                     <button
                         onClick={() => swiperRef.current?.slidePrev()}
                         className="bg-[#23242A] hover:bg-[#FF5900] text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors"

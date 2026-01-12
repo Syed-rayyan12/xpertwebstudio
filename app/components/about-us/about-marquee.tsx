@@ -3,21 +3,21 @@ import React from 'react'
 
 const AboutMarquee = () => {
     const topLineItems = [
-        'CREATIVE DESIGN',
-        'WEB DEVELOPMENT',
-        'BRANDING',
-        'DIGITAL MARKETING',
-        'UI/UX DESIGN',
-        'SEO OPTIMIZATION',
+        'creative design',
+        'web development',
+        'branding',
+        'digital marketing',
+        'ui/ux design',
+        'seo optimization',
     ]
 
     const bottomLineItems = [
-        'INNOVATIVE SOLUTIONS',
-        'BRAND STRATEGY',
-        'CONTENT CREATION',
-        'SOCIAL MEDIA',
-        'GRAPHIC DESIGN',
-        'E-COMMERCE',
+        'innovative solutions',
+        'brand strategy',
+        'content creation',
+        'social media',
+        'graphic design',
+        'e-commerce',
     ]
 
     return (
