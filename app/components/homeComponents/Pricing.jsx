@@ -402,7 +402,7 @@ const Pricing = () => {
 
 
                         {/* Features List */}
-                        <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 h-[300px] sm:h-[350px] md:h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#FF5900] scrollbar-track-gray-800 pr-2">
+                        <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 h-[240px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#FF5900] scrollbar-track-gray-800 pr-2">
                             {plan.features.map((feature, idx) => (
                                 <li key={idx} className="flex items-center gap-2 sm:gap-3 text-white/80 text-xs sm:text-sm">
                                     <svg
