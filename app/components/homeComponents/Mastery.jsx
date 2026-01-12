@@ -85,11 +85,11 @@ function Mastery() {
                     {/* Left Side - Stats Card */}
                     <div ref={statsRef} className="relative w-[90%] max-sm:w-full max-sm:h-[320px] pt-10  rounded-2xl sm:rounded-3xl border border-[#f8f8f8] bg-[linear-gradient(135deg,#1a1a1a_0%,#0f0f0f_100%)] px-6 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:shadow-[0_0px_60px_rgba(255,102,0,0.26)]">
                         <div className='w-full'>
-                            <div className="text-5xl sm:text-6xl md:text-[80px] font-bold tracking-[2px] text-[#ff6600]">
+                            <div className="text-5xl sm:text-6xl max-sm:text-center md:text-[80px] font-bold tracking-[2px] text-[#ff6600]">
                                 {Math.floor(count)}+
                             </div>
                             <div className="w-full sm:w-4/5 md:w-3/4 ">
-                                <p className="text-sm sm:text-[15px] leading-[1.6] sm:leading-[1.8] text-[#999]">
+                                <p className="text-sm sm:text-[15px] text-center max-sm:mt-2 leading-[1.6] sm:leading-[1.8] text-[#999]">
                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                                 </p>
                             </div>

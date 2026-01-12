@@ -63,8 +63,8 @@ const ProjectCard = ({ project, badgePosition = '-right-11' }) => {
         }
         
         if (isMobile) {
-            // Smaller polygon for mobile
-            return 'polygon(0% 0%, calc(100% - 120px) 0%, calc(100% - 118px) 2px, calc(100% - 115px) 5px, calc(100% - 113px) 10px, calc(100% - 112px) 15px, calc(100% - 111px) 20px, calc(100% - 111px) 25px, calc(100% - 110px) 30px, calc(100% - 108px) 33px, calc(100% - 105px) 35px, calc(100% - 100px) 37px, calc(100% - 95px) 38px, calc(100% - 88px) 39px, calc(100% - 20px) 39px, calc(100% - 17px) 40px, calc(100% - 14px) 42px, calc(100% - 11px) 44px, calc(100% - 8px) 47px, calc(100% - 5px) 51px, calc(100% - 3px) 56px, calc(100% - 1px) 62px, 100% 68px, 100% 100%, 0% 100%)'
+            // Wider polygon for mobile top-right
+            return 'polygon(0% 0%, calc(100% - 180px) 0%, calc(100% - 177px) 2px, calc(100% - 173px) 5px, calc(100% - 170px) 10px, calc(100% - 168px) 15px, calc(100% - 167px) 20px, calc(100% - 166px) 30px, calc(100% - 165px) 35px, calc(100% - 163px) 40px, calc(100% - 159px) 44px, calc(100% - 154px) 47px, calc(100% - 148px) 49px, calc(100% - 140px) 51px, calc(100% - 130px) 52px, calc(100% - 30px) 52px, calc(100% - 25px) 53px, calc(100% - 20px) 55px, calc(100% - 15px) 58px, calc(100% - 10px) 62px, calc(100% - 6px) 67px, calc(100% - 3px) 73px, calc(100% - 1px) 80px, 100% 88px, 100% 100%, 0% 100%)'
         }
         
         // Desktop polygon
@@ -96,9 +96,7 @@ const ProjectCard = ({ project, badgePosition = '-right-11' }) => {
             <div
                 className="relative h-full w-full overflow-hidden bg-[#0c0d12] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 style={{
-                    clipPath: shouldShowHover
-                        ? 'polygon(0% 0%, calc(100% - 280px) 0%, calc(100% - 275px) 2px, calc(100% - 270px) 5px, calc(100% - 267px) 10px, calc(100% - 265px) 15px, calc(100% - 264px) 20px, calc(100% - 264px) 50px, calc(100% - 262px) 55px, calc(100% - 258px) 60px, calc(100% - 252px) 64px, calc(100% - 245px) 67px, calc(100% - 235px) 69px, calc(100% - 220px) 70px, calc(100% - 40px) 70px, calc(100% - 35px) 71px, calc(100% - 30px) 73px, calc(100% - 25px) 75px, calc(100% - 20px) 78px, calc(100% - 15px) 82px, calc(100% - 10px) 87px, calc(100% - 5px) 93px, 100% 100px, 100% 100%, 0% 100%)'
-                        : 'polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)',
+                    clipPath: getClipPath(),
                     borderRadius: '32px'
                 }}
 
