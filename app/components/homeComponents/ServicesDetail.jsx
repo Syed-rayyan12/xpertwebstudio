@@ -128,7 +128,7 @@ const ServicesDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='absolute  max-sm:right-0 max-sm:-bottom-16   xl:bottom-4  xl:right-40   lg:right-0 lg:-bottom-2 md:right-0 md:-bottom-2 flex  gap-2 max-sm:gap-3 '>
+                    <div className='absolute  max-sm:right-0 max-sm:-bottom-16  xl:bottom-4  xl:right-40   lg:right-0 lg:-bottom-2 md:right-0 md:-bottom-2 flex  gap-2 max-sm:gap-3 '>
                         <div className='max-sm:hidden max-xl:hidden'>
                             <PlayVideo label="Play Video" />
                         </div>
