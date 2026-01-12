@@ -108,9 +108,9 @@ const TestimonialSlider = () => {
                 >
                     {testimonials.map((testimonial) => (
                         <SwiperSlide key={testimonial.id}>
-                            <div className='xl:h-[350px] xl:max-w-[300px] lg:h-[400px] lg:max-w-[200px] md:h-[320px] md:max-w-[200px]  sm:h-[500px] sm:max-w-[200px] max-sm:h-[350px] max-sm:max-w-[100px]'>
+                            <div className='xl:h-[350px] bg-[#1A1B1E] rounded-br-xl relative mx-auto xl:max-w-[300px] lg:h-[400px] lg:max-w-[200px] md:h-[320px] md:max-w-[200px]  sm:h-[500px] sm:max-w-[200px] max-sm:h-[350px] max-sm:max-w-[100px]'>
                                 {/* Background Image (Vector Card) */}
-                                <Image
+                                {/* <Image
                                     src={testimonial.image}
                                     alt={testimonial.name}
                                     fill
@@ -118,84 +118,75 @@ const TestimonialSlider = () => {
                                         objectFit: 'cover',
                                         objectPosition: 'center'
                                     }}
-                                />
-                                
-                                {/* Content Overlay */}
-                                <div style={{
-                                    position: 'absolute',
-                                    inset: '0',
-                                    padding: '32px'
-                                }}>
-                                    {/* Hash Image */}
-                                    <div style={{
-                                        position: 'relative',
-                                        width: '48px',
-                                        height: '48px',
-                                        minWidth: '48px',
-                                        maxWidth: '48px',
-                                        minHeight: '48px',
-                                        maxHeight: '48px',
-                                        marginBottom: '16px',
-                                        marginLeft: '16px',
-                                        flexShrink: 0
-                                    }}>
-                                        <Image
-                                            src="/images/hash.png"
-                                            alt="hash"
-                                            fill
-                                            style={{
-                                                objectFit: 'contain'
-                                            }}
-                                        />
-                                    </div>
-                                    
-                                    {/* Review Text */}
-                                    <p className="text-white leading-relaxed" >
-                                        {testimonial.review}
-                                    </p>
+                                /> */}
 
-                                    {/* Ellipse Image - Bottom Left - Fixed */}
-                                    <div style={{
-                                        position: 'absolute',
-                                        bottom: '8px',
-                                        left: '0px',
-                                        width: '64px',
-                                        height: '64px',
-                                        minWidth: '64px',
-                                        maxWidth: '64px',
-                                        minHeight: '64px',
-                                        maxHeight: '64px',
-                                        flexShrink: 0,
-                                        borderRadius: '50%',
-                                        overflow: 'hidden',
-                                        border: '2px solid white'
-                                    }}>
+
+                            
+
+                                {/* Content Overlay */}
+                                <div>
+                                    <div >
+                                        {/* Hash Image */}
+                                        <div style={{
+                                            position: 'relative',
+                                            width: '48px',
+                                            height: '48px',
+                                            minWidth: '48px',
+                                            maxWidth: '48px',
+                                            minHeight: '48px',
+                                            maxHeight: '48px',
+                                            marginBottom: '16px',
+                                            marginLeft: '16px',
+                                            flexShrink: 0
+                                        }}>
+                                            <Image
+                                                src="/images/hash.png"
+                                                alt="hash"
+                                                fill
+                                                style={{
+                                                    objectFit: 'contain'
+                                                }}
+                                            />
+                                        </div>
+
+                                        {/* Review Text */}
+                                        <p className="text-white leading-relaxed" >
+                                            {testimonial.review}
+                                        </p>
+                                        <div className='absolute  md:left-[140px] md:bottom-[40px] xl:left-[140px] xl:bottom-[40px] lg:left-[150px] lg:bottom-[40px] sm:left-[180px] sm:bottom-[40px] max-sm:left-[100px] max-sm:bottom-[40px]'>
+                                            <h4 className="font-medium text-white" style={{
+                                                fontSize: '18px',
+                                                marginBottom: '4px',
+                                                whiteSpace: 'nowrap'
+                                            }}>
+                                                {testimonial.name}
+                                            </h4>
+                                            <p className="text-white" style={{
+                                                fontSize: '14px',
+                                                whiteSpace: 'nowrap'
+                                            }}>
+                                                {testimonial.type}
+                                            </p>
+                                        </div>
+
+                                      
+
+
+
+                                    </div>
+                                </div>
+
+                                    <div className='w-[100px] h-[100px]  rounded-tr-xl  border-t border-r border-b border-[#0E0F11] p-6 flex justify-center items-center absolute left-0 bottom-0 bg-[#0E0F11]'>
+                                  
+                                     <div 
+                                        >
                                         <Image
                                             src={testimonial.imageTwo}
                                             alt="Ellipse"
-                                            fill
-                                            style={{
-                                                objectFit: 'cover',
-                                                objectPosition: 'center'
-                                            }}
+                                            width={900}
+                                            height={900}
+                                           className='w-full h-full object-cover'
                                         />
-                                    </div>
-
-                                    {/* Reviewer Info - Fixed Position */}
-                                    <div className='absolute  md:left-[140px] md:bottom-[40px] xl:left-[140px] xl:bottom-[40px] lg:left-[150px] lg:bottom-[40px] sm:left-[180px] sm:bottom-[40px] max-sm:left-[100px] max-sm:bottom-[40px]'>
-                                        <h4 className="font-medium text-white" style={{
-                                            fontSize: '18px',
-                                            marginBottom: '4px',
-                                            whiteSpace: 'nowrap'
-                                        }}>
-                                            {testimonial.name}
-                                        </h4>
-                                        <p className="text-white" style={{
-                                            fontSize: '14px',
-                                            whiteSpace: 'nowrap'
-                                        }}>
-                                            {testimonial.type}
-                                        </p>
                                     </div>
                                 </div>
                             </div>

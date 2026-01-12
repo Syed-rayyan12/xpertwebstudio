@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import ViewWorkButton from '../header/ViewWorkButton'
+import Link from 'next/link'
 
 const projects = [
     {
@@ -124,7 +125,9 @@ function ProjectShowcase() {
                                 </h2>
                             </div>
                             <div className="mt-4">
+                                <Link href="/our-work">
                                 <ViewWorkButton label="See Our Work" />
+                                </Link>
                             </div>
                         </div>
                     </div>
