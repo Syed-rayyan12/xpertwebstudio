@@ -3,32 +3,32 @@ import React from 'react'
 
 const Marquee = () => {
     const topLineItems = [
-        'creative design',
-        'web development',
-        'branding',
-        'digital marketing',
-        'ui/ux design',
-        'seo optimization',
+        'Creative Design',
+        'Web Development',
+        'Branding',
+        'Digital Marketing',
+        'UI/UX Design',
+        'SEO Optimization',
     ]
 
     const bottomLineItems = [
-        'innovative solutions',
-        'brand strategy',
-        'content creation',
-        'social media',
-        'graphic design',
-        'e-commerce',
+        'Innovative Solutions',
+        'Brand Strategy',
+        'Content Creation',
+        'Social Media',
+        'Graphic Design',
+        'E-Commerce',
     ]
 
     return (
-        <section className="relative overflow-hidden py-6 sm:py-10 lg:py-16  max-sm:mt-[990px] sm:mt-[920px] md:mt-[1150px] lg:mt-[1100px]">
+        <section className="relative overflow-hidden py-6 sm:py-10 lg:py-16  max-sm:mt-[990px] sm:mt-[920px] md:mt-[1150px] lg:mt-[1100px] xl:mt-[850px]">
             {/* Top Line - Scrolls Left */}
             <div className="relative flex overflow-hidden whitespace-nowrap border-b-2 border-white/20 py-3 sm:py-4 lg:py-6">
                 <div className="flex animate-marquee-left gap-4 sm:gap-8 lg:gap-12">
                     {[...topLineItems, ...topLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white uppercase tracking-wider"
+                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -38,7 +38,7 @@ const Marquee = () => {
                     {[...topLineItems, ...topLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white uppercase tracking-wider"
+                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -52,7 +52,7 @@ const Marquee = () => {
                     {[...bottomLineItems, ...bottomLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white uppercase tracking-wider"
+                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -62,7 +62,7 @@ const Marquee = () => {
                     {[...bottomLineItems, ...bottomLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white uppercase tracking-wider"
+                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>

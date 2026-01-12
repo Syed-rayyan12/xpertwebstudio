@@ -89,7 +89,7 @@ function Mastery() {
                                 {Math.floor(count)}+
                             </div>
                             <div className="w-full sm:w-4/5 md:w-3/4 ">
-                                <p className="text-sm sm:text-[15px] text-center max-sm:mt-2 leading-[1.6] sm:leading-[1.8] text-[#999]">
+                                <p className="text-sm sm:text-[15px] max-sm:text-center max-sm:mt-2 leading-[1.6] sm:leading-[1.8] text-[#999]">
                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                                 </p>
                             </div>
@@ -139,7 +139,7 @@ function Mastery() {
                                         </div>
                                     ))}
                                 </div>
-                                <p className="text-[15px] leading-[1.8] text-[#999] max-sm:text-center">
+                                <p className="text-[15px] leading-[1.8] text-[#999] text-left max-sm:text-center">
                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less here, content "here", making it look like readable English.
                                 </p>
                             </div>

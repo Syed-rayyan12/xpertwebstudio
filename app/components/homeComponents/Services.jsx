@@ -47,7 +47,7 @@ const Services = () => {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className={`flex flex-col items-center text-center group ${index !== services.length - 1 ? 'lg:border-r border-[#FF5900]/40' : ''
+                        className={`flex flex-col items-center text-center group ${index !== services.length - 1 ? 'lg:border-r -pl-6  border-[#FF5900]/40' : ''
                             }`}
                     >
                         {/* Icon Container */}

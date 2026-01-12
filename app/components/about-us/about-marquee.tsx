@@ -3,21 +3,21 @@ import React from 'react'
 
 const AboutMarquee = () => {
     const topLineItems = [
-        'creative design',
-        'web development',
-        'branding',
-        'digital marketing',
-        'ui/ux design',
-        'seo optimization',
+        'Creative Design',
+        'Web Development',
+        'Branding',
+        'Digital Marketing',
+        'UI/UX Design',
+        'SEO Optimization',
     ]
 
     const bottomLineItems = [
-        'innovative solutions',
-        'brand strategy',
-        'content creation',
-        'social media',
-        'graphic design',
-        'e-commerce',
+        'Innovative Solutions',
+        'Brand Strategy',
+        'Content Creation',
+        'Social Media',
+        'Graphic Design',
+        'E-Commerce',
     ]
 
     return (
@@ -28,7 +28,7 @@ const AboutMarquee = () => {
                     {[...topLineItems, ...topLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-7xl font-bold text-white uppercase tracking-wider"
+                            className="text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -38,7 +38,7 @@ const AboutMarquee = () => {
                     {[...topLineItems, ...topLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-7xl font-bold text-white uppercase tracking-wider"
+                            className="text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -52,7 +52,7 @@ const AboutMarquee = () => {
                     {[...bottomLineItems, ...bottomLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-7xl font-bold text-white uppercase tracking-wider"
+                            className="text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -62,7 +62,7 @@ const AboutMarquee = () => {
                     {[...bottomLineItems, ...bottomLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-7xl font-bold text-white uppercase tracking-wider"
+                            className="text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
