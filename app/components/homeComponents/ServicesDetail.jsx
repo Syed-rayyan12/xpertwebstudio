@@ -53,7 +53,7 @@ const ServicesDetail = () => {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
                     <div 
-                        className="relative h-[250px] sm:h-[350px] lg:h-[650px] rounded-xl overflow-hidden bg-[#0c0d12]"
+                        className="relative max-sm:hidden h-[250px] sm:h-[350px]  lg:h-[650px] rounded-xl overflow-hidden bg-[#0c0d12]"
                         onMouseEnter={() => setHoveredService(null)}
                     >
                         <Image
@@ -80,7 +80,7 @@ const ServicesDetail = () => {
                                                 alt={service.title}
                                                 fill
                                                 unoptimized
-                                                className="object-cover"
+                                                className="object-cover max-sm:hidden"
                                             />
                                         </div>
                                     </div>

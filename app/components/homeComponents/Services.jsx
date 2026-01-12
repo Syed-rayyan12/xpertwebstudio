@@ -71,12 +71,12 @@ const Services = () => {
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-xl font-semibold text-white mb-3">
+                        <h3 className="text-xl max-sm:text-2xl font-semibold text-white mb-3">
                             {service.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-white/70 text-sm leading-relaxed">
+                        <p className="text-white max-sm:px-12 text-sm leading-relaxed">
                             {service.description}
                         </p>
                     </div>
