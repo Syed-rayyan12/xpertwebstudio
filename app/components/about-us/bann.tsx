@@ -6,7 +6,7 @@ const banner = () => {
   return (
     <>
       <div className=' mt-16 relative xl:px-16  lg:px-12  max-sm:px-4 md:px-10 sm:px-6  mx-auto mt-10 mx-auto'>
-        <Image src="/images/bann.png" alt='video banner' width={800} height={800} className='object-cover w-full relative h-[165px]' />
+        <Image src="/images/bann.png" alt='video banner' width={800} height={800} className='object-cover w-full relative h-[500px] max-sm:h-[300px]' />
         <div className='absolute top-0 left-18 w-1/2 p-6 max-sm:hidden sm:hidden xl:block'>
           <Image src="/images/shape-2.png" alt='shape' width={600} height={600} className='object-contain' />
             <div className="absolute top-12 left-10  text-white text-sm font-medium w-3 h-3 rounded-full bg-orange-500"></div>

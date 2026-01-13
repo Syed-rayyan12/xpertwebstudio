@@ -157,7 +157,7 @@ export default function Header() {
         <header
           className={`flex justify-between items-center my-2 sm:my-3 md:my-4 mx-auto ${
             isScrolled 
-              ? "h-16 sm:h-18 md:h-20 w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] xl:w-[70%] max-sm:px-4 lg:px-8 border rounded-3xl md:rounded-4xl border-gray-200/50 bg-white/20 backdrop-blur-xl shadow-lg" 
+              ? "h-16 sm:h-18 md:h-20 w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] xl:w-[70%] px0 border rounded-3xl md:rounded-4xl border-gray-200/50 bg-white/20 backdrop-blur-xl shadow-lg" 
               : "h-16 sm:h-18 md:h-20 xl:px-16 lg:px-12 max-sm:px-4 md:px-10 sm:px-6 border-none bg-transparent"
           }`}
           style={{ transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }}

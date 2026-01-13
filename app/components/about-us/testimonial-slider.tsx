@@ -108,85 +108,70 @@ const TestimonialSlider = () => {
                 >
                     {testimonials.map((testimonial) => (
                         <SwiperSlide key={testimonial.id}>
-                            <div className='xl:h-[350px] bg-[#1A1B1E] rounded-br-xl relative mx-auto xl:max-w-[300px] lg:h-[400px] lg:max-w-[200px] md:h-[320px] md:max-w-[200px]  sm:h-[500px] sm:max-w-[200px] max-sm:h-[350px] max-sm:max-w-[100px]'>
-                                {/* Background Image (Vector Card) */}
-                                {/* <Image
-                                    src={testimonial.image}
-                                    alt={testimonial.name}
-                                    fill
-                                    style={{
-                                        objectFit: 'cover',
-                                        objectPosition: 'center'
-                                    }}
-                                /> */}
-
-
-                            
-
-                                {/* Content Overlay */}
-                                <div>
-                                    <div >
-                                        {/* Hash Image */}
-                                        <div style={{
-                                            position: 'relative',
-                                            width: '48px',
-                                            height: '48px',
-                                            minWidth: '48px',
-                                            maxWidth: '48px',
-                                            minHeight: '48px',
-                                            maxHeight: '48px',
-                                            marginBottom: '16px',
-                                            marginLeft: '16px',
-                                            flexShrink: 0
-                                        }}>
-                                            <Image
-                                                src="/images/hash.png"
-                                                alt="hash"
-                                                fill
-                                                style={{
-                                                    objectFit: 'contain'
-                                                }}
-                                            />
-                                        </div>
-
-                                        {/* Review Text */}
-                                        <p className="text-white leading-relaxed" >
-                                            {testimonial.review}
-                                        </p>
-                                        <div className='absolute  md:left-[140px] md:bottom-[40px] xl:left-[140px] xl:bottom-[40px] lg:left-[150px] lg:bottom-[40px] sm:left-[180px] sm:bottom-[40px] max-sm:left-[100px] max-sm:bottom-[40px]'>
-                                            <h4 className="font-medium text-white" style={{
-                                                fontSize: '18px',
-                                                marginBottom: '4px',
-                                                whiteSpace: 'nowrap'
-                                            }}>
-                                                {testimonial.name}
-                                            </h4>
-                                            <p className="text-white" style={{
-                                                fontSize: '14px',
-                                                whiteSpace: 'nowrap'
-                                            }}>
-                                                {testimonial.type}
-                                            </p>
-                                        </div>
-
-                                      
-
-
-
-                                    </div>
-                                </div>
-
-                                    <div className='w-[100px] h-[100px]  rounded-tr-xl  border-t border-r border-b border-[#0E0F11] p-6 flex justify-center items-center absolute left-0 bottom-0 bg-[#0E0F11]'>
-                                  
-                                     <div 
+                            <div className="group">
+                                {/* CARD WITH SHAPE EFFECT */}
+                                <div className="w-full relative overflow-hidden rounded-bl-xl mb-3 pl-px lg:rounded-bl-2xl">
+                                    {/* MINI IMAGE CONTAINER WITH SVG CURVES */}
+                                    <div className="absolute bottom-0 bg-[#0e0f11] left-0 z-20  rounded-tr-2xl flex transition-transform duration-400 transform pt-2 pr-2 lg:pr-3 lg:pt-3 lg:rounded-tr-3xl xl:translate-x-0 xl:translate-y-0 dark:bg-grayDark-600">
+                                        {/* TOP LEFT CURVE */}
+                                        <svg
+                                            className="w-10 h-10 lg:w-12 lg:h-12 text-[#0e0f11] fill-current absolute top-px left-0 transform -translate-y-full rotate-180 dark:text-grayDark-600"
+                                            version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
                                         >
-                                        <Image
-                                            src={testimonial.imageTwo}
-                                            alt="Ellipse"
-                                            width={900}
-                                            height={900}
-                                           className='w-full h-full object-cover'
-                                        />
+                                            <path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path>
+                                        </svg>
+
+                                        {/* BOTTOM RIGHT CURVE */}
+                                        <svg
+                                            className="w-10 h-10 lg:w-12 lg:h-12 text-[#0e0f11] fill-current absolute -bottom-px right-px transform translate-x-full rotate-180 dark:text-grayDark-600"
+                                            version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 100 100"
+                                        >
+                                            <path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path>
+                                        </svg>
+
+                                        {/* MINI IMAGE */}
+                                        <div className="rounded-full transform-gpu overflow-hidden relative w-12 h-12 bg-gray-50 dark:bg-grayDark-400 lg:w-16 lg:h-16 ">
+                                            <div
+                                                className="relative overflow-hidden w-full"
+                                                style={{ paddingTop: "100%" }}
+                                            >
+                                                <img
+                                                    src={testimonial.imageTwo}
+                                                    alt=""
+                                                    className="w-full h-full object-cover absolute top-0 left-0"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* MAIN IMAGE */}
+                                    <div className="w-full relative z-10 h-[350px] rounded-2xl overflow-hidden dark:bg-grayDark-400 lg:rounded-3xl">
+                                      
+                                            <div
+                                                className="relative overflow-hidden bg-[#1A1B1E] w-full  p-6 h-full "
+                                               
+                                            >
+                                                {/* Top: Two orange hash icons and paragraph */}
+                                                <div className="flex flex-col  gap-30 mb-4">
+                      
+                                                    <div className="flex flex-col items-start gap-8 mt-2">
+                                                        <img src="/images/hash.png" alt="hash" className="w-12 h-12 object-contain" />
+                                                        <p className="text-white text-base leading-relaxed line-clamp-4 m-0">
+                                                            {testimonial.review}
+                                                        </p>
+                                                        <span className="text-white font-bold px-20 pt-10 max-sm:pt-6 max-sm:px-14 uppercase tracking-wide text-lg">{testimonial.name}</span>
+                                                    </div>
+                                                  
+                                                   
+                                                </div>
+                                                {/* Bottom: Name in uppercase at the end */}
+                                            </div>
+                                        
                                     </div>
                                 </div>
                             </div>
