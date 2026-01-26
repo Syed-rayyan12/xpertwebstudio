@@ -1,17 +1,21 @@
 import { useId } from "react";
 import CircleArrow from "../header/CircleArrow";
+import Link from "next/link";
+
 
 
 type ViewWorkButtonProps = {
   label?: string;
   href?: string;
+    onClick?: () => void;
 };
 
-export function ViewMoreVideo({
-  label = "View More Video",
+export function PlayVideo({
+  label = "View More Videos",
   href = "#contact",
+  onClick,
 }: ViewWorkButtonProps) {
-  const filterId = `view-more-${useId().replace(/:/g, "")}-filter`;
+  const filterId = `view-more-videos-${useId().replace(/:/g, "")}-filter`;
 
   return (
     <div className="relative inline-flex">
@@ -35,8 +39,9 @@ export function ViewMoreVideo({
           </filter>
         </defs>
       </svg>
-      <a
-        href={href}
+     
+      <button
+        onClick={onClick}
         className="group inline-flex items-center gap-0 rounded-full outline-none transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#ff6900]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#111317]"
         style={{
           filter: `url(#${filterId})`,
@@ -44,22 +49,24 @@ export function ViewMoreVideo({
         }}
       >
         <span
-          className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 text-[15px] font-light tracking-[0.12em] text-white transition-colors duration-500 group-hover:bg-white/20"
+          className="inline-flex items-center rounded-full bg-[#1A1B1E] px-5 py-2.5 text-[15px] font-light tracking-[0.12em] text-white transition-colors duration-500 bg-[#1A1B1E] cursor-pointer"
           style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
         >
           {label}
         </span>
         <span className="relative flex h-9 w-9 items-center justify-center">
           <span
-            className="absolute inset-0 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-[#120701]  transition-transform duration-500 group-hover:translate-x-3 group-hover:rotate-45 group-hover:bg-white/20"
+            className="absolute inset-0 flex items-center justify-center rounded-full bg-[#1A1B1E] text-[#120701]  transition-transform duration-500 group-hover:translate-x-3 group-hover:rotate-45 bg-[#1A1B1E] cursor-pointer"
             style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
           >
             <CircleArrow className="h-3.5 w-3.5 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 text-white" />
           </span>
         </span>
-      </a>
+      </button>
+      
     </div>
   );
 }
 
-export default ViewMoreVideo;
+export default PlayVideo;
+
