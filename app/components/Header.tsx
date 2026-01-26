@@ -153,14 +153,19 @@ export default function Header() {
   }
   return (
     <>
-      <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 999999, transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }}>
+      <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 999999 }}>
         <header
-          className={`flex justify-between items-center my-2 sm:my-3 md:my-4 mx-auto ${
-            isScrolled 
-              ? "h-16 sm:h-18 md:h-20 w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] xl:w-[70%] px0 border rounded-3xl md:rounded-4xl border-gray-200/50 bg-white/20 backdrop-blur-xl shadow-lg" 
-              : "h-16 sm:h-18 md:h-20 xl:px-16 lg:px-12 max-sm:px-4 md:px-10 sm:px-6 border-none bg-transparent"
-          }`}
-          style={{ transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }}
+          className="flex justify-between items-center my-2 sm:my-3 md:my-4 mx-auto h-16 sm:h-18 md:h-20 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12"
+          style={{
+            width: isScrolled ? '75%' : '99vw',
+            transition: 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), border 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+            backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+            backdropFilter: isScrolled ? 'blur(12px)' : 'none',
+            WebkitBackdropFilter: isScrolled ? 'blur(12px)' : 'none',
+            border: isScrolled ? '1px solid rgba(229, 231, 235, 0.5)' : '1px solid transparent',
+            borderRadius: isScrolled ? '1.5rem' : '0',
+            boxShadow: isScrolled ? '0 10px 25px rgba(0, 0, 0, 0.1)' : 'none'
+          }}
         >
 
           {/* Logo */}
