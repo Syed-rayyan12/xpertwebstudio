@@ -22,7 +22,7 @@ const AboutMarquee = () => {
 
     return (
         <section className="relative overflow-hidden py-6 sm:py-10 lg:py-16 max-sm:pt-[0px] max-sm:mt-[0px] md:mt-[60px] lg:mt-[60px]">
-            {/* Top Line - Scrolls Left */
+            {/* Top Line - Scrolls Left */}
             <div className="relative flex overflow-hidden whitespace-nowrap border-b-2 border-white/20 py-3 sm:py-4 lg:py-6">
                 <div className="flex animate-marquee-left gap-4 sm:gap-8 lg:gap-12">
                     {[...topLineItems, ...topLineItems].map((item, index) => (
@@ -69,34 +69,6 @@ const AboutMarquee = () => {
                     ))}
                 </div>
             </div>
-
-            <style jsx>{`
-                @keyframes marquee-left {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
-
-                @keyframes marquee-right {
-                    0% {
-                        transform: translateX(-50%);
-                    }
-                    100% {
-                        transform: translateX(0);
-                    }
-                }
-
-                .animate-marquee-left {
-                    animation: marquee-left 100s linear infinite;
-                }
-
-                .animate-marquee-right {
-                    animation: marquee-right 100s linear infinite;
-                }
-            `}</style>
         </section>
     )
 }
