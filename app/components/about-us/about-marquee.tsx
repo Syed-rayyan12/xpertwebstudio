@@ -21,10 +21,10 @@ const AboutMarquee = () => {
     ]
 
     return (
-        <section className="relative overflow-hidden max-sm:mt-[100px] md:mt-[60px] lg:mt-[60px]">
-            {/* Top Line - Scrolls Left */}
-            <div className="relative flex overflow-hidden whitespace-nowrap  border-white/20 py-6">
-                <div className="flex animate-marquee-left gap-12">
+        <section className="relative overflow-hidden py-6 sm:py-10 lg:py-16 max-sm:mt-[0px] md:mt-[60px] lg:mt-[60px]">
+            {/* Top Line - Scrolls Left */
+            <div className="relative flex overflow-hidden whitespace-nowrap border-b-2 border-white/20 py-3 sm:py-4 lg:py-6">
+                <div className="flex animate-marquee-left gap-4 sm:gap-8 lg:gap-12">
                     {[...topLineItems, ...topLineItems].map((item, index) => (
                         <span
                             key={index}
@@ -34,7 +34,7 @@ const AboutMarquee = () => {
                         </span>
                     ))}
                 </div>
-                <div className="flex animate-marquee-left gap-12" aria-hidden="true">
+                <div className="flex animate-marquee-left gap-4 sm:gap-8 lg:gap-12" aria-hidden="true">
                     {[...topLineItems, ...topLineItems].map((item, index) => (
                         <span
                             key={index}
@@ -47,8 +47,8 @@ const AboutMarquee = () => {
             </div>
 
             {/* Bottom Line - Scrolls Right */}
-            <div className="relative flex overflow-hidden whitespace-nowrap py-6">
-                <div className="flex animate-marquee-right gap-12">
+            <div className="relative flex overflow-hidden whitespace-nowrap py-3 sm:py-4 lg:py-6">
+                <div className="flex animate-marquee-right gap-4 sm:gap-8 lg:gap-12">
                     {[...bottomLineItems, ...bottomLineItems].map((item, index) => (
                         <span
                             key={index}
@@ -58,7 +58,7 @@ const AboutMarquee = () => {
                         </span>
                     ))}
                 </div>
-                <div className="flex animate-marquee-right gap-12" aria-hidden="true">
+                <div className="flex animate-marquee-right gap-4 sm:gap-8 lg:gap-12" aria-hidden="true">
                     {[...bottomLineItems, ...bottomLineItems].map((item, index) => (
                         <span
                             key={index}
