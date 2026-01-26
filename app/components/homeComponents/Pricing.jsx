@@ -376,7 +376,7 @@ const Pricing = () => {
             </div>
 
             {/* Pricing Cards */}
-            <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-all duration-500 ease-in-out px-4">
+            <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 transition-all duration-500 ease-in-out px-4">
                 {plans.map((plan, index) => (
                     <div
                         key={`${activeTab}-${index}`}
