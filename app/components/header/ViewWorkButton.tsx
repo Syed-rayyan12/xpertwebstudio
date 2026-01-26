@@ -4,13 +4,18 @@ import CircleArrow from "./CircleArrow";
 type ViewWorkButtonProps = {
   label?: string;
   href?: string;
+  asChild?: boolean;
 };
 
 export function ViewWorkButton({
   label = "Get in Touch",
   href = "/contact-us",
+  asChild = false,
 }: ViewWorkButtonProps) {
   const filterId = `${useId().replace(/:/g, "")}-filter`;
+  
+  const Component = asChild ? "span" : "a";
+  const componentProps = asChild ? {} : { href };
 
   return (
     <div className="relative inline-flex">
@@ -34,8 +39,8 @@ export function ViewWorkButton({
           </filter>
         </defs>
       </svg>
-      <a
-        href={href}
+      <Component
+        {...componentProps}
         className="group inline-flex items-center gap-0 rounded-full outline-none transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#ff6900]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#111317]"
         style={{
           filter: `url(#${filterId})`,
@@ -56,7 +61,7 @@ export function ViewWorkButton({
             <CircleArrow className="h-3.5 w-3.5 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </span>
         </span>
-      </a>
+      </Component>
     </div>
   );
 }

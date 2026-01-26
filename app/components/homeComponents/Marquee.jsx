@@ -21,7 +21,7 @@ const Marquee = () => {
     ]
 
     return (
-        <section className="relative overflow-hidden py-6 sm:py-10 lg:py-16  max-sm:mt-[990px] sm:mt-[920px] md:mt-[1150px] lg:mt-[1100px] xl:mt-[850px]">
+        <section className="relative overflow-hidden py-6 sm:py-10 lg:py-16  max-sm:mt-[990px] sm:mt-[920px] md:mt-[1150px] lg:mt-[1100px] xl:mt-[980px]">
             {/* Top Line - Scrolls Left */}
             <div className="relative flex overflow-hidden whitespace-nowrap border-b-2 border-white/20 py-3 sm:py-4 lg:py-6">
                 <div className="flex animate-marquee-left gap-4 sm:gap-8 lg:gap-12">

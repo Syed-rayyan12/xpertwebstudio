@@ -33,8 +33,8 @@ const projects = [
         year: '2025',
         client: 'Tech Innovations',
         tags: [
-            {label: 'Development' },
-            {label: 'Website' },
+            { id: 'tag-3-1', label: 'Development' },
+            { id: 'tag-3-2', label: 'Website' },
         ],
         title: 'Next-Gen SaaS Platform Design & Development',
         description: 'Modern tech startup branding with scalable web application.',
@@ -163,7 +163,7 @@ function ProjectShowcase() {
                             </div>
                             <div className="mt-4">
                                 <Link href="/our-work">
-                                <ViewWorkButton label="See Our Work" />
+                                <ViewWorkButton label="See Our Work" asChild />
                                 </Link>
                             </div>
                         </div>

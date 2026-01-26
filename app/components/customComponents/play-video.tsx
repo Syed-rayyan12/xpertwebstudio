@@ -1,15 +1,19 @@
 import { useId } from "react";
 import CircleArrow from "../header/CircleArrow";
+import Link from "next/link";
+
 
 
 type ViewWorkButtonProps = {
   label?: string;
   href?: string;
+    onClick?: () => void;
 };
 
 export function PlayVideo({
   label = "Play Video",
   href = "#contact",
+  onClick,
 }: ViewWorkButtonProps) {
   const filterId = `play-video-${useId().replace(/:/g, "")}-filter`;
 
@@ -35,8 +39,9 @@ export function PlayVideo({
           </filter>
         </defs>
       </svg>
-      <a
-        href={href}
+     
+      <button
+        onClick={onClick}
         className="group inline-flex items-center gap-0 rounded-full outline-none transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#ff6900]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#111317]"
         style={{
           filter: `url(#${filterId})`,
@@ -57,9 +62,11 @@ export function PlayVideo({
             <CircleArrow className="h-3.5 w-3.5 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 text-white" />
           </span>
         </span>
-      </a>
+      </button>
+      
     </div>
   );
 }
 
 export default PlayVideo;
+

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import ViewWorkButton from '../header/ViewWorkButton';
 import PlayVideo from '../customComponents/play-video';
@@ -11,6 +11,11 @@ import Link from 'next/link';
 const ServicesDetail = () => {
     const [activeImage, setActiveImage] = useState(0);
     const [hoveredService, setHoveredService] = useState(null);
+    const videoRef = useRef(null);
+
+    const playVideo = () => {
+        videoRef.current?.play();
+    }
 
     const services = [
         { id: 1, number: '01', title: 'Web Development', image: '/images/web-development-service.png', link: '/web-development' },
@@ -52,7 +57,7 @@ const ServicesDetail = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-                    <div 
+                    <div
                         className="relative max-sm:hidden h-[250px] sm:h-[350px]  lg:h-[650px] rounded-xl overflow-hidden bg-[#0c0d12]"
                         onMouseEnter={() => setHoveredService(null)}
                     >
@@ -67,44 +72,44 @@ const ServicesDetail = () => {
                     <div className=" flex flex-col gap-8">
                         {services.map((service, index) => (
                             <Link key={service.id} href={service.link}>
-                            <div
-                                onMouseEnter={() => handleServiceHover(index)}
-                                onMouseLeave={handleServiceLeave}
-                                className={`flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 rounded-4xl border-1 transition-all duration-300 cursor-pointer ${hoveredService === index ? 'border-[#FF5900] bg-[#FF5900] text-white' : 'border-white'}`}
-                            >
-                                <div className="flex items-center gap-2 sm:gap-4 lg:gap-6">
-                                    <div className={`relative rounded-lg overflow-hidden transition-all duration-500 ease-out ${hoveredService === index ? 'w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 opacity-100' : 'w-0 h-12 sm:h-14 lg:h-16 opacity-0'}`}>
-                                        <div className={`absolute inset-0 w-12 sm:w-14 lg:w-16 transition-transform duration-500 ease-out ${hoveredService === index ? 'translate-x-0' : '-translate-x-full'}`}>
-                                            <Image
-                                                src={service.image}
-                                                alt={service.title}
-                                                fill
-                                                unoptimized
-                                                className="object-cover max-sm:hidden"
-                                            />
+                                <div
+                                    onMouseEnter={() => handleServiceHover(index)}
+                                    onMouseLeave={handleServiceLeave}
+                                    className={`flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 rounded-4xl border-1 transition-all duration-300 cursor-pointer ${hoveredService === index ? 'border-[#FF5900] bg-[#FF5900] text-white' : 'border-white'}`}
+                                >
+                                    <div className="flex items-center gap-2 sm:gap-4 lg:gap-6">
+                                        <div className={`relative rounded-lg overflow-hidden transition-all duration-500 ease-out ${hoveredService === index ? 'w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 opacity-100' : 'w-0 h-12 sm:h-14 lg:h-16 opacity-0'}`}>
+                                            <div className={`absolute inset-0 w-12 sm:w-14 lg:w-16 transition-transform duration-500 ease-out ${hoveredService === index ? 'translate-x-0' : '-translate-x-full'}`}>
+                                                <Image
+                                                    src={service.image}
+                                                    alt={service.title}
+                                                    fill
+                                                    unoptimized
+                                                    className="object-cover max-sm:hidden"
+                                                />
+                                            </div>
                                         </div>
+                                        <h3 className="text-base sm:text-lg lg:text-2xl font-medium text-white transition-all duration-500">
+                                            {service.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-base sm:text-lg lg:text-2xl font-medium text-white transition-all duration-500">
-                                        {service.title}
-                                    </h3>
+                                    <div className={`transition-transform duration-300 text-white ${hoveredService === index ? 'translate-x-1' : ''}`}>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white"
+                                            fill="white"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                            />
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div className={`transition-transform duration-300 text-white ${hoveredService === index ? 'translate-x-1' : ''}`}>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white"
-                                        fill="white"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                        />
-                                    </svg>
-                                </div>
-                            </div>
                             </Link>
                         ))}
                     </div>
@@ -114,7 +119,18 @@ const ServicesDetail = () => {
 
 
                 <div className='mx-auto mt-20 max-sm:-mt-40 relative'>
-                    <Image src="/images/video-banner.png" alt='video banner' width={600} height={600} className='object-cover w-full max-sm:h-[150px] relative' />
+                    <div className='bg-black w-full h-[600px] max-sm:h-[150px] relative rounded-xl'>
+                        <video
+                            src="/images/video/client.mp4"
+                            loop
+                            ref={videoRef}
+                            autoPlay
+                            controls={false}
+                            className='absolute top-0 left-0 w-full h-full object-cover rounded-xl'
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <div className='absolute top-0 left-0 w-full sm:w-3/4 w f p-3 sm:p-4 lg:p-6 max-sm:hidden max-xl:hidden'>
                         <Image src="/images/shape.png" alt='shape' width={600} height={600} className='object-contain ' />
                         <h2 className='absolute top-8 sm:top-16 lg:top-28 left-6 sm:left-8 lg:left-10 -translate-x-2 sm:-translate-x-4 lg:-translate-x-6 -translate-y-1/2 text-white text-sm sm:text-2xl lg:text-[37px] font-semibold px-2 sm:px-4 lg:px-8 leading-tight'>
@@ -128,9 +144,9 @@ const ServicesDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='absolute  max-sm:right-0 max-sm:-bottom-16  xl:bottom-0  xxl xxxl   lg:right-0 lg:-bottom-2 md:right-0 md:-bottom-2 flex  gap-2 max-sm:gap-3 '>
+                    <div className='flex justify-end mt-10 gap-4'>
                         <div className='max-sm:hidden max-xl:hidden'>
-                            <PlayVideo label="Play Video" />
+                            <PlayVideo label="Play Video" onClick={playVideo} />
                         </div>
                         <Link href="/video-testimonial">
                             <div>
@@ -151,9 +167,9 @@ const ServicesDetail = () => {
                                 If you’re looking for a professional Manchester web design agency to elevate your brand or build your website, get in touch with XpertWebStudio today.
                             </h2>
                             <Link href="/about-us">
-                            <div className='mt-4 sm:mt-6 lg:mt-8'>
-                                <AboutXpert />
-                            </div>
+                                <div className='mt-4 sm:mt-6 lg:mt-8'>
+                                    <AboutXpert />
+                                </div>
                             </Link>
                         </div>
                     </div>
