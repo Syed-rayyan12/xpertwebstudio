@@ -28,7 +28,7 @@ const AboutMarquee = () => {
                     {[...topLineItems, ...topLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-7xl font-bold text-white tracking-wider"
+                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -38,7 +38,7 @@ const AboutMarquee = () => {
                     {[...topLineItems, ...topLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-7xl font-bold text-white tracking-wider"
+                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -52,7 +52,7 @@ const AboutMarquee = () => {
                     {[...bottomLineItems, ...bottomLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-7xl font-bold text-white tracking-wider"
+                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
@@ -62,7 +62,7 @@ const AboutMarquee = () => {
                     {[...bottomLineItems, ...bottomLineItems].map((item, index) => (
                         <span
                             key={index}
-                            className="text-7xl font-bold text-white tracking-wider"
+                            className="text-2xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wider"
                         >
                             {item}
                         </span>
