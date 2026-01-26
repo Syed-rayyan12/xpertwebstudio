@@ -1,5 +1,10 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import {
     Select,
     SelectContent,
@@ -10,6 +15,7 @@ import {
 
 const Pricing = () => {
     const [activeTab, setActiveTab] = useState('logo-design')
+    const swiperRef = useRef(null)
 
     const tabs = [
         { id: 'logo-design', label: 'Logo Design' },
@@ -375,65 +381,83 @@ const Pricing = () => {
                 </Select>
             </div>
 
-            {/* Pricing Cards */}
-            <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 transition-all duration-500 ease-in-out px-4">
-                {plans.map((plan, index) => (
-                    <div
-                        key={`${activeTab}-${index}`}
-                        className="rounded-md border-2 border-[#FF5900] bg-[#0c0d12]/50 p-4 sm:p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2  animate-fadeIn"
-                    >
-                        {/* Plan Name */}
-                        <h3 className="text-xl sm:text-2xl font-semibold text-center text-white mb-3 sm:mb-4">
-                            {plan.name}
-                        </h3>
+            {/* Pricing Cards Slider */}
+            <div className="relative px-4">
+                <Swiper
+                    ref={swiperRef}
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={24}
+                    slidesPerView={1}
+                    pagination={{ 
+                        clickable: true,
+                        bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#FF5900]',
+                    }}
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 24,
+                        },
+                        1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 32,
+                        },
+                    }}
+                    className="pricing-swiper !pb-12"
+                >
+                    {plans.map((plan, index) => (
+                        <SwiperSlide key={`${activeTab}-${index}`}>
+                            <div className="rounded-md border-2 border-[#FF5900] bg-[#0c0d12]/50 p-4 sm:p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 h-full">
+                                {/* Plan Name */}
+                                <h3 className="text-xl sm:text-2xl font-semibold text-center text-white mb-3 sm:mb-4">
+                                    {plan.name}
+                                </h3>
 
-                        {/* Underline */}
-                        <div className="h-[1px] bg-white mb-4 sm:mb-6"></div>
+                                {/* Underline */}
+                                <div className="h-[1px] bg-white mb-4 sm:mb-6"></div>
 
-                        {/* Pricing */}
-                        <div className="mb-4 sm:mb-6 text-center">
-                            <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FF5900]">
-                                {plan.price}
-                            </span>
-                            <span className="text-white/70 ml-2 text-sm sm:text-base">/month</span>
-                        </div>
+                                {/* Pricing */}
+                                <div className="mb-4 sm:mb-6 text-center">
+                                    <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FF5900]">
+                                        {plan.price}
+                                    </span>
+                                    <span className="text-white/70 ml-2 text-sm sm:text-base">/month</span>
+                                </div>
 
-                        {/* Underline */}
+                                {/* Features List */}
+                                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 h-[240px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#FF5900] scrollbar-track-gray-800 pr-2">
+                                    {plan.features.map((feature, idx) => (
+                                        <li key={idx} className="flex items-center gap-2 sm:gap-3 text-white/80 text-xs sm:text-sm">
+                                            <svg
+                                                className="w-5 h-5 text-white flex-shrink-0 mt-0.5"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth="2"
+                                                    d="M5 13l4 4L19 7"
+                                                />
+                                            </svg>
+                                            <span className='text-white'>{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
 
+                                {/* Underline */}
+                                <div className="h-[1px] bg-white mb-4 sm:mb-6"></div>
 
-                        {/* Features List */}
-                        <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 h-[240px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#FF5900] scrollbar-track-gray-800 pr-2">
-                            {plan.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-center gap-2 sm:gap-3 text-white/80 text-xs sm:text-sm">
-                                    <svg
-                                        className="w-5 h-5 text-white flex-shrink-0 mt-0.5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M5 13l4 4L19 7"
-                                        />
-                                    </svg>
-                                    <span className='text-white'>{feature}</span>
-                                </li>
-                            ))}
-                        </ul>
-
-                        {/* Underline */}
-                        <div className="h-[1px] bg-white mb-4 sm:mb-6"></div>
-
-                        {/* Order Button */}
-                        <div className='w-44 mx-auto'>
-                        <button className="w-full rounded-[51.8px] bg-[#FF5900] px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium text-white transition-all duration-300 hover:bg-[#ff6a1a] hover:shadow-[0_10px_30px_rgba(255,89,0,0.4)]">
-                            Order Now
-                        </button>
-                        </div>
-                    </div>
-                ))}
+                                {/* Order Button */}
+                                <div className='w-44 mx-auto'>
+                                    <button className="w-full rounded-[51.8px] bg-[#FF5900] px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium text-white transition-all duration-300 hover:bg-[#ff6a1a] hover:shadow-[0_10px_30px_rgba(255,89,0,0.4)]">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </section>
     )
