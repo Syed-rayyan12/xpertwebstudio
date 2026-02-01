@@ -83,8 +83,8 @@ function Mastery() {
             <div className="xl:px-16  lg:px-12  max-sm:px-6 md:px-10 sm:px-6  mx-auto mt-20">
                 <div className="flex max-sm:flex-col max-sm:justify-center gap-12">
                     {/* Left Side - Stats Card */}
-                    <div ref={statsRef} className="relative w-[90%] max-sm:w-full max-sm:h-[320px] pt-10  rounded-2xl sm:rounded-3xl border border-[#f8f8f8] bg-[linear-gradient(135deg,#1a1a1a_0%,#0f0f0f_100%)] px-6 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:shadow-[0_0px_60px_rgba(255,102,0,0.26)]">
-                        <div className='w-full'>
+                    <div ref={statsRef} className="relative w-[90%] flex justify-between items-center max-sm:flex-col max-sm:py-3  max-sm:w-full max-sm:h-[320px]   rounded-2xl sm:rounded-3xl border border-[#f8f8f8] bg-[linear-gradient(135deg,#1a1a1a_0%,#0f0f0f_100%)] px-6 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:shadow-[0_0px_60px_rgba(255,102,0,0.26)]">
+                        <div className='w-full '>
                             <div className="text-5xl sm:text-6xl max-sm:text-center md:text-[80px] font-bold tracking-[2px] text-[#ff6600]">
                                 {Math.floor(count)}+
                             </div>
@@ -98,7 +98,7 @@ function Mastery() {
                       
 
 
-                            <div className="absolute bottom-[50px] max-sm:right-30 max-sm:bottom-6 right-[40px] flex h-[120px] w-[100px] items-end gap-[15px]">
+                            <div className="absolute bottom-[50px] max-sm:right-24 max-sm:bottom-4 right-[40px] flex h-[120px] w-[100px] items-end gap-[15px]">
                                 <div
                                     className="flex-1 rounded-[8px] bg-[linear-gradient(180deg,#666_0%,#333_100%)] transition-all duration-1000 ease-out"
                                     style={{ height: `${barHeight1}%` }}
@@ -115,7 +115,7 @@ function Mastery() {
                     <div className='w-full'>
                         <div className="flex flex-col gap-12 max-sm:justify-center lg:flex-row max-lg:flex-col">
                             <div>
-                                <h1 className="text-4xl max-sm:pt-4 font-normal max-sm:text-center leading-[1.2] ">
+                                <h1 className="text-4xl max-sm:text-[30px] max-sm:pt-4 font-normal max-sm:text-center leading-[1.2] ">
                                     Mastery of Creative Innovation
                                 </h1>
                                 <div className='max-sm:text-center'>
@@ -150,7 +150,7 @@ function Mastery() {
 
             {/* Discount Form Section */}
             <div className="w-full xl:px-16  lg:px-12  max-sm:px-6 mt-20 mb-20 md:px-10 sm:px-6  mx-auto ">
-                <h2 className="text-[50px] font-bold text-[#ff6600]">Get 60% OFF</h2>
+                <h2 className="text-[50px] font-bold text-[#ff6600] max-sm:text-[40px]">Get 60% OFF</h2>
                 <div className="mt-8 grid gap-5 md:[grid-template-columns:repeat(3,_minmax(0,_1fr))_0.8fr]">
                     <input
                         type="text"
