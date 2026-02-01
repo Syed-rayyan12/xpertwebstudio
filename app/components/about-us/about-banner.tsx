@@ -45,7 +45,7 @@ const aboutBanner = () => {
               />
               
               {/* Circular Spin Icon - Cutout positioned at bottom-left */}
-              <div className="absolute bottom-0 left-0 w-15 h-16 max-sm:w-16 max-sm:h-16 sm:w-20 sm:h-20 md:w-32 md:h-24 lg:w-24 lg:h-24 xl:w-26 xl:h-26 animate-spin-slow">
+              <div className="absolute bottom-0 left-0 w-15 h-15 max-sm:w-16 max-sm:h-16 sm:w-20 sm:h-20 md:w-32 md:h-24 lg:w-24 lg:h-24 xl:w-26 xl:h-26 animate-spin-slow">
                 <Image
                   src="/images/group.png"
                   alt="Spinning Icon"
