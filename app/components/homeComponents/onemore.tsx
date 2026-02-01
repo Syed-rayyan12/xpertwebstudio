@@ -16,10 +16,10 @@ const onemore = () => {
     return (
         <>
             <div className='w-full xl:px-16  lg:px-12  max-sm:px-4 md:px-10 sm:px-6 mx-auto  left-0 right-0  '>
-                <div className='mx-auto mt-20 max-sm:-mt-40 relative'>
+                <div className='mx-auto mt-20  relative'>
                     <div className=''>
                        
-                        <div className="relative w-full h-[600px] rounded-xl ">
+                        <div className="relative w-full h-[600px] max-sm:h-[300px] rounded-xl ">
 
                             <video
                                 src="/images/video/client.mp4"
