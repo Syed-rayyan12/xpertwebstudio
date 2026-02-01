@@ -35,7 +35,7 @@ const aboutBanner = () => {
           {/* Right Image with Circular Spin Icon */}
           <div className="relative w-full max-w-[1000px] flex justify-center lg:justify-end mt-8 lg:mt-0">
             {/* Main Image Container */}
-            <div className="relative w-full max-w-[320px] h-[300px] max-sm:max-w-[400px] sm:max-w-[400px] sm:h-[400px] md:max-w-[600px] md:h-[500px] lg:max-w-[480px] lg:h-[450px] xl:max-w-[580px] xl:h-[500px] rounded-xl sm:rounded-2xl overflow-visible">
+            <div className="relative w-full max-w-[320px] max-sm:h-[270px] max-sm:max-w-[400px] sm:max-w-[400px] sm:h-[400px] md:max-w-[600px] md:h-[500px] lg:max-w-[480px] lg:h-[450px] xl:max-w-[580px] xl:h-[500px] rounded-xl sm:rounded-2xl overflow-visible">
               <Image
                 src="/images/about-banner.png"
                 alt="About Us"
@@ -45,7 +45,7 @@ const aboutBanner = () => {
               />
               
               {/* Circular Spin Icon - Cutout positioned at bottom-left */}
-              <div className="absolute bottom-0 left-0 w-16 h-16 max-sm:w-16 max-sm:h-16 sm:w-20 sm:h-20 md:w-32 md:h-24 lg:w-24 lg:h-24 xl:w-26 xl:h-26 animate-spin-slow">
+              <div className="absolute bottom-0 left-0 w-15 h-16 max-sm:w-16 max-sm:h-16 sm:w-20 sm:h-20 md:w-32 md:h-24 lg:w-24 lg:h-24 xl:w-26 xl:h-26 animate-spin-slow">
                 <Image
                   src="/images/group.png"
                   alt="Spinning Icon"
