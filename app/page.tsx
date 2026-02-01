@@ -9,6 +9,7 @@ import Marquee from './components/homeComponents/Marquee'
 import BlogSlider from './components/customComponents/BlogSlider';
 import SheetMarquee from "./components/customComponents/sheet-marquee";
 import { Footer } from "./components/customComponents";
+import Onemore from "./components/homeComponents/onemore";
 export default function Home() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function Home() {
       <Pricing />
       <Services />
       <ServicesDetail />
+      <Onemore />
       <Marquee />
       <BlogSlider />
        <SheetMarquee/>

@@ -260,6 +260,17 @@ span.inline-flex.items-center.rounded-full.bg-\[\#ff6900\].px-6.py-3.text-\[13px
 }
 
 @layer utilities {
+
+  .inverted-corner {
+    position: absolute;
+    width: 24px;
+    aspect-ratio: 1;
+    background: radial-gradient(
+      circle 24px at top left,
+      transparent 98%,
+      #ff6a1a 100%
+    );
+  }
  
   
   @media (min-width: 1280px) {
@@ -297,3 +308,4 @@ span.inline-flex.items-center.rounded-full.bg-\[\#ff6900\].px-6.py-3.text-\[13px
 }
 
 /* Custom utilities for tags at max-width 630px */
+
