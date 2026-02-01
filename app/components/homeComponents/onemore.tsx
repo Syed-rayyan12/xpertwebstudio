@@ -15,9 +15,9 @@ const onemore = () => {
     // }
     return (
         <>
-            <div className='w-full xl:px-16  lg:px-12  max-sm:px-4 md:px-10 sm:px-6 mx-auto'>
-                <div className='mx-auto mt-20 max-sm:-mt-40 '>
-                
+            <div className='w-full xl:px-16  lg:px-12  max-sm:px-4 md:px-10 sm:px-6 mx-auto  left-0 right-0  '>
+                <div className='mx-auto mt-20 max-sm:-mt-40 relative'>
+                    <div className=''>
                        
                         <div className="relative w-full h-[600px] rounded-xl ">
 
@@ -29,7 +29,7 @@ const onemore = () => {
                                 className="w-full h-full object-cover rounded-xl"
                             />
 
-                            <div className="absolute right-0 bottom-0 w-[37%] h-17 bg-[#0E0F11] rounded-tl-2xl flex items-center justify-center text-white font-semibold">
+                            <div className="absolute right-0 bottom-0 w-[35%] h-20 bg-[#0E0F11] rounded-tl-2xl flex items-center justify-center text-white font-semibold">
 
                                 <span className="absolute -left-6 bottom-0 inverted-corner"></span>
                                                                
@@ -85,7 +85,7 @@ const onemore = () => {
                     </div>
                 </div>
 
-
+            </div>
         </>
     )
 }
