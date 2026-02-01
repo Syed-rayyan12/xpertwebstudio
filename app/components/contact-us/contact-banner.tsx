@@ -30,44 +30,23 @@ const contactBanner = () => {
           {/* Right Image with Circular Spin Icon */}
           <div className="relative w-full max-w-[1000px] flex justify-center lg:justify-end mt-8 lg:mt-0">
             {/* Main Image Container */}
-            <div className="relative w-full h-[500px] max-sm:h-[300px] rounded-bl-xl sm:rounded-bl-2xl overflow-hidden">
+            <div className="relative w-full max-w-[320px] h-[320px] max-sm:max-w-[400px] sm:max-w-[400px] sm:h-[400px] md:max-w-[600px] md:h-[500px] lg:max-w-[480px] lg:h-[450px] xl:max-w-[580px] xl:h-[500px] rounded-xl sm:rounded-2xl overflow-visible">
               <Image
                 src="/images/about-banner.png"
                 alt="Contact Us"
                 fill
-                className="object-cover"
+                className="object-cover rounded-xl sm:rounded-2xl"
                 priority
               />
               
-              {/* Inverted Shape Container with SVG Curves - Bottom Left */}
-              <div className="absolute bottom-0 bg-[#0e0f11] left-0 z-20 rounded-tr-2xl flex transition-transform duration-400 transform pt-2 pr-2 lg:pr-3 lg:pt-3 lg:rounded-tr-3xl">
-                {/* TOP LEFT CURVE */}
-                <svg
-                  className="w-10 h-10 lg:w-12 lg:h-12 text-[#0e0f11] fill-current absolute top-px left-0 transform -translate-y-full rotate-180"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 100 100"
-                >
-                  <path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path>
-                </svg>
-                {/* BOTTOM RIGHT CURVE */}
-                <svg
-                  className="w-10 h-10 lg:w-12 lg:h-12 text-[#0e0f11] fill-current absolute -bottom-px right-px transform translate-x-full rotate-180"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 100 100"
-                >
-                  <path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path>
-                </svg>
-                {/* Circular Spin Icon inside inverted shape */}
-                <div className="rounded-full transform-gpu overflow-hidden relative w-32 h-32 max-sm:w-20 max-sm:h-20 animate-spin-slow">
-                  <Image
-                    src="/images/group.png"
-                    alt="Spinning Icon"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+              {/* Circular Spin Icon - Cutout positioned at bottom-left */}
+              <div className="absolute bottom-0 left-0 w-16 h-16 max-sm:w-18 max-sm:h-18 sm:w-20 sm:h-20 md:w-32 md:h-26 lg:w-26 lg:h-24 xl:w-24 xl:h-28 animate-spin-slow">
+                <Image
+                  src="/images/group.png"
+                  alt="Spinning Icon"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
           </div>
