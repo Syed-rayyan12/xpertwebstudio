@@ -42,7 +42,7 @@ const Footer = () => {
   return (
     <>
       {/* Mobile & Tablet Footer (Hidden on Desktop) */}
-      <footer className="lg:hidden bg-[#0E0F11] w-full p-4 -mt-4 rounded-t-2xl  text-gray-800">
+      <footer className="lg:hidden bg-[#0E0F11] w-full p-4  rounded-t-2xl  text-gray-800">
         <div className="w-full relative  bg-[#1A1B1E] rounded-bl-2xl rounded-tr-2xl pt-3 pb-16 overflow-hidden">
           
           {/* Logo at bottom left (mobile only) */}

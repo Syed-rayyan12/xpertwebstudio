@@ -12,7 +12,7 @@ const marqueeItems = [
 const sheetMarquee = () => {
   return (
     <>
-        <div className="overflow-hidden border-b border-[#333] bg-[#1a1a1a] py-2 sm:py-3 lg:py-4">
+        <div className="overflow-hidden border-b border-[#333] bg-[#1a1a1a] py-2 sm:py-3 lg:py-4 max-sm:my-8">
                 <div className="flex whitespace-nowrap [animation:scroll_30s_linear_infinite]">
                     {marqueeItems.concat(marqueeItems).map((item, index) => (
                         <span
