@@ -223,7 +223,7 @@ const Footer = () => {
               <a href="#home" className="hover:text-[#FF5900] text-[#FF5900] font-semibold mb-2 sm:mb-4 text-sm sm:text-base">Quick Links</a>
               <a href="/blogs" className="hover:text-[#FF5900] text-[15px]  ">Blogs</a>
               <a href="/reviews" className="hover:text-[#FF5900] text-[15px]  ">Reviews</a>
-              <a href="/video-testimonials" className="hover:text-[#FF5900] text-[15px]  ">Video Testimonials</a>
+              <a href="/video-testimonial" className="hover:text-[#FF5900] text-[15px]  ">Video Testimonials</a>
             </nav>
           </div>
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between bg-[#1A1B1E] rounded-xl p-4 sm:p-5 md:p-6 gap-4 lg:gap-6">
