@@ -205,7 +205,7 @@ const Footer = () => {
               <a href="#home" className="hover:text-[#FF5900] text-[#FF5900] font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Home</a>
               <a href="/about-us" className="hover:text-[#FF5900] text-[15px]  ">About</a>
               <a href="/packages" className="hover:text-[#FF5900] text-[15px]  ">Packages</a>
-              <a href="/portfolio" className="hover:text-[#FF5900] text-[15px]  ">Portfolio</a>
+              <a href="/review" className="hover:text-[#FF5900] text-[15px]  ">Review</a>
               <a href="/contact-us" className="hover:text-[#FF5900] text-[15px]  ">Contact Us</a>
             </nav>
             <nav className="flex flex-col items-start gap-1.5 sm:gap-2">
